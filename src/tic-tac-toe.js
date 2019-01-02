@@ -1,11 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
-class Square extends React.Component {
+export class Square extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    const mark = this.props.shouldBold ? (
+    const mark = this.props.shouldEmphasize ? (
       <em>{this.props.value}</em>
     ) : (
       this.props.value
@@ -18,7 +17,7 @@ class Square extends React.Component {
   }
 }
 
-class Board extends React.Component {
+export class Board extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -52,12 +51,11 @@ class Board extends React.Component {
 
   renderSquare(i) {
     const isLastMark = i === this.state.history.slice(-1)[0];
-    console.log(this.state.history.slice(-1));
     return (
       <Square
         value={this.state.squares[i]}
         onMark={() => this.handleMark(i)}
-        shouldBold={isLastMark}
+        shouldEmphasize={isLastMark}
       />
     );
   }

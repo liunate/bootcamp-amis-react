@@ -1,15 +1,94 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Adapter from 'enzyme-adapter-react-16';
-import { configure, shallow, mount } from 'enzyme';
+import { configure, shallow, mount, render } from 'enzyme';
 
 configure({adapter: new Adapter()});
 
 import { Game, Board, Square } from './tic-tac-toe';
 
-describe('<App /> shallow rendering', () => {
-  it('h1 contains correct text', () => {
-    const wrapper = shallow(<App/>);
-    expect(wrapper.find('h1').text()).toBe('Welcome to React');
+describe('Game(shallow)', () => {
+  it('should have board', () => {
+    const game = shallow(<Game/>);
+
+    expect(game.containsMatchingElement(<Board/>)).toEqual(true);
+    // Good Cases
+    //    expect(game.matchesElement(<div><div><Board/></div></div>)).toEqual(true);
+    //    expect(game.matchesElement(<Board/>)).toEqual(false);
+    //    expect(game.containsMatchingElement(<Square/>)).toEqual(false);
+  });
+});
+
+describe('Game(mount)', () => {
+  it('should have board', () => {
+    const game = mount(<Game/>);
+
+    expect(game.containsMatchingElement(<Square/>)).toEqual(true);
+  });
+});
+
+describe('Game(render)', () => {
+  it('should have board', () => {
+    const game = render(<Game/>);
+
+    expect(game.text().length).toBeGreaterThan(0);
+    //    console.log(game.text());
+
+    // Bad Cases
+    //    expect(game.containsMatchingElement(<Square/>)).toEqual(false);
+  });
+});
+
+describe('Board', () => {
+  // Enzyme Selectors - CSS Selector
+  it('should show squares in row-by-row fashion', () => {
+    const board = shallow(<Board/>);
+
+    expect(board.find('.board-row').length).toBeGreaterThan(0);
+  });
+
+  // Enzyme Selectors - Prop Selector(similar to IDL attribute)
+  it('should decide whether to emphasize the mark inside of square', () => {
+    const board = shallow(<Board/>);
+    board.instance().handleMark(5);
+
+    expect(board.find('[shouldEmphasize=true]').length).toBe(1);
+    // Bad Cases
+    //    expect(board.find("[shouldEmphasize='true']").length).toBe(1);
+  });
+
+  // Enzyme Selectors - React Component Constructor
+  it('should contains 9 x squares', () => {
+    const board = shallow(<Board/>);
+
+    expect(board.find(Square)).toHaveLength(9);
+  });
+
+  it('should indicate it\'s O\'s turn turn after first turn(X)', () => {
+    const board = shallow(<Board/>);
+    board.instance().handleMark(5);
+
+    expect(board.html()).toEqual(expect.stringContaining('Next Player: O'));
+  });
+});
+
+describe('Square', () => {
+  it('should be clickable', () => {
+    const square = shallow(<Square/>);
+
+    expect(square.exists('button'));
+  });
+
+  it.skip('should render mark when specified', () => {
+    expect(false).toBeTruthy();
+  });
+
+  it.skip('should be able to render italic mark', () => {
+    expect(false).toBeTruthy();
+  });
+
+  it.skip('should notify itself is clicked', () => {
+    // Simulate events
+    // https://airbnb.io/enzyme/docs/api/ShallowWrapper/simulate.html
+    expect(false).toBeTruthy();
   });
 });
