@@ -1,13 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-class Square extends React.Component {
+export class Square extends React.Component {
   render() {
     return <button className="square">{/* TODO */}</button>;
   }
 }
 
-class Board extends React.Component {
+export class Board extends React.Component {
   render() {
     return (
       <div>
