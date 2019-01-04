@@ -11,6 +11,7 @@ describe('Game(shallow)', () => {
     const game = shallow(<Game/>);
 
     expect(game.containsMatchingElement(<Board/>)).toEqual(true);
+//    console.log(game.debug());
     // Good Cases
     //    expect(game.matchesElement(<div><div><Board/></div></div>)).toEqual(true);
     //    expect(game.matchesElement(<Board/>)).toEqual(false);
@@ -23,18 +24,22 @@ describe('Game(mount)', () => {
     const game = mount(<Game/>);
 
     expect(game.containsMatchingElement(<Square/>)).toEqual(true);
+//    console.log(game.debug());
   });
 });
-
+ 
 describe('Game(render)', () => {
   it('should have board', () => {
+    // Cheerio wrapper for traversing/manipulating the DOM
     const game = render(<Game/>);
 
-    expect(game.text().length).toBeGreaterThan(0);
-    //    console.log(game.text());
+    expect(game.toString()).toEqual(expect.stringContaining('square'));
+//    console.log(game.toString());
 
-    // Bad Cases
-    //    expect(game.containsMatchingElement(<Square/>)).toEqual(false);
+    // variable 'game' does not have containsMatchingElement function
+    //    expect(game.containsMatchingElement(<Square/>)).toEqual(false);    
+    // variable 'game' does not have debug function
+    //    game.debug();
   });
 });
 
@@ -67,7 +72,7 @@ describe('Board', () => {
     const board = shallow(<Board/>);
     board.instance().handleMark(5);
 
-    expect(board.html()).toEqual(expect.stringContaining('Next Player: O'));
+    expect(board.debug()).toEqual(expect.stringContaining('O'));
   });
 });
 

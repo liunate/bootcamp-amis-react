@@ -1,0 +1,5 @@
+export default {
+  'game.title': '3目並べ：最初の手、天元！',
+  'game.startFrom': 'ゲーム開始日：',
+  'game.tips': 'ポーンを配置するにはここをクリック',
+};
