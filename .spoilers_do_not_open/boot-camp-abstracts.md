@@ -73,7 +73,7 @@ Components
 capture the flag: add one more language 'ja' with `<FormattedMessage>`(any message at any place is okay!)
 
 # Higher-Order Component
-Imperative API, intlInject and HOC
-EnzymeHelper
-OtakuFeeder
+Imperative API, intlInject and HOC  
+EnzymeHelper  
+OtakuFeeder  
 capture the flag: create your own themeable-HOC(theme class) 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-function injectBackgroundColor(MonoComponent){
-  class BackgroundColorComponent extends React.Component{
+function injectThemeColor(MonoComponent){
+  class ThemeComponent extends React.Component{
     constructor (props){
       super(props);
 
@@ -13,12 +13,12 @@ function injectBackgroundColor(MonoComponent){
       const randomColor = this.colors[randomIndex];
 
       return (
-        <MonoComponent backgroundColor={randomColor}/>
+        <MonoComponent themeColor={randomColor} {...this.props}/>
       );
     }
   }
   
-  return BackgroundColorComponent;
+  return ThemeComponent;
 }
 
-export { injectBackgroundColor };
+export { injectThemeColor };
