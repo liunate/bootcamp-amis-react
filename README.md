@@ -2,7 +2,10 @@
 
 In this tutorial, we'll show how to build an interactive tic-tac-toe game with React.
 
-You can see what we'll be building here: **[Final Result(SPOILERS!)](https://codesandbox.io/s/64n9o67n9r)**. If the code doesn't make sense to you, or if you are unfamiliar with the code's syntax, don't worry! The goal of this tutorial is to help you understand React and its syntax.
+[Obsolete] You can see what we'll be building here: **[Final Result(SPOILERS!)](https://codesandbox.io/s/64n9o67n9r)**.  
+You can see the full examples for the session and capture-mini-flags in this repo,.  
+
+If the code doesn't make sense to you, or if you are unfamiliar with the code's syntax, don't worry! The goal of this tutorial is to help you understand React and its syntax.
 
 ### Prerequisites
 
@@ -11,7 +14,8 @@ We'll assume that you have some familiarity with HTML and JavaScript, but you sh
 If you need to review JavaScript, we recommend reading [this guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript). Note that we're also using some features from ES6 -- a recent version of JavaScript. In this tutorial, we're using [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), and [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) statements. You can use the [Babel REPL](babel://es5-syntax-example) to check what ES6 code compiles to.
 
 ## Setup for the Tutorial
-Open up [Tic Tac Toe_Template](https://codesandbox.io/s/l73mljqz2z) in browser and `Fork` it.
+`Fork` this  
+[Obsolete] Open up [Tic Tac Toe_Template](https://codesandbox.io/s/l73mljqz2z) in browser and `Fork` it.
 
 ## Overview
 
@@ -65,7 +69,7 @@ The `ShoppingList` component above only renders built-in DOM components like `<d
 
 ## Inspecting the Starter Code
 
-This Starter Code [Tic Tac Toe_Template](https://codesandbox.io/s/l73mljqz2z) is the base of what we're building.  
+[Obselete] This Starter Code [Tic Tac Toe_Template](https://codesandbox.io/s/l73mljqz2z) is the base of what we're building.  
  
 Story/Requirement to play tic-tac-toe:
 1. Start tic-tac-toe(the game) on page

@@ -8,9 +8,10 @@ know HTML, js and class
     - function
 
 # React Component: Tic-Tac-Toe(Render, Component, Property, State)
-[Tic Tac Toe_Template](https://codesandbox.io/s/l73mljqz2z)    
+final: github https://github.com/liunate/bootcamp-amis-jest.git  
+Tic Tac Toe_Template https://codesandbox.io/s/l73mljqz2z    
 ~~(https://codepen.io/nateflakyrobot/pen/JwJmga?editors=0010)~~  
-[Tic Tac Toe_Nate](https://codesandbox.io/s/64n9o67n9r)  
+Tic Tac Toe_Nate https://codesandbox.io/s/64n9o67n9r  
 ~~(https://codepen.io/nateflakyrobot/pen/OrgaQb?editors=0011)~~
 
 Story/Requirement:
