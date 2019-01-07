@@ -27,10 +27,22 @@ React Intl
 //};
 //
 //const mainLanguage = navigator.language.split(/[-_]/)[0];
-////const mainLanguage = 'en';
+////const mainLanguage = 'zh';
 //
 //ReactDOM.render(
 //  <IntlProvider locale={mainLanguage} messages={supportedMessageBundles[mainLanguage]}>
 //    <OlympicGame/>
 //  </IntlProvider>
+//  , document.getElementById('root'));
+
+
+
+
+/*
+HOC
+ */
+//import { OtakuGame } from './otakuGame';
+//
+//ReactDOM.render(
+//  <OtakuGame/>
 //  , document.getElementById('root'));
