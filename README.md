@@ -1,9 +1,8 @@
 ### What Are We Building?
 
 In this tutorial, we'll show how to build an interactive tic-tac-toe game with React.
-
-[Obsolete] You can see what we'll be building here: **[Final Result(SPOILERS!)](https://codesandbox.io/s/64n9o67n9r)**.  
-You can see the full examples for the session and capture-mini-flags in this repo,.  
+  
+_**SPOILER** You can see the full examples for the session and capture-mini-flags example code in this repo at `.spoilers_do_not_open` folder._
 
 If the code doesn't make sense to you, or if you are unfamiliar with the code's syntax, don't worry! The goal of this tutorial is to help you understand React and its syntax.
 
@@ -14,8 +13,8 @@ We'll assume that you have some familiarity with HTML and JavaScript, but you sh
 If you need to review JavaScript, we recommend reading [this guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript). Note that we're also using some features from ES6 -- a recent version of JavaScript. In this tutorial, we're using [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), and [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) statements. You can use the [Babel REPL](babel://es5-syntax-example) to check what ES6 code compiles to.
 
 ## Setup for the Tutorial
-`Fork` this  
-[Obsolete] Open up [Tic Tac Toe_Template](https://codesandbox.io/s/l73mljqz2z) in browser and `Fork` it.
+`Fork` this and run command:  
+`npm install`
 
 ## Overview
 
@@ -66,8 +65,6 @@ JSX comes with the full power of JavaScript. You can put *any* JavaScript expres
 The `ShoppingList` component above only renders built-in DOM components like `<div />` and `<li />`. But you can compose and render custom React components too. For example, we can now refer to the whole shopping list by writing `<ShoppingList />`. Each React component is encapsulated and can operate independently; this allows you to build complex UIs from simple components.
 
 ## Inspecting the Starter Code
-
-[Obselete] This Starter Code [Tic Tac Toe_Template](https://codesandbox.io/s/l73mljqz2z) is the base of what we're building.  
  
 Story/Requirement to play tic-tac-toe:
 1. Start tic-tac-toe(the game) on page
@@ -123,7 +120,7 @@ remove `value` from `square` state
 lift state `squares`  
 add state `xIsNext`
 
-## Create your own `Super Ultra` Tic-Tac-Toe `Remix Hyper Edition EX Plus Alpha`
+## Create your own Tic-Tac-Toe
 some possible goals here...
 - Conditional rendering by read state: Show next player(O or X) on page (by update render method)
 - Set state: Click button to reset the game(NO BROWSER RELOAD!!!) (by assign new `squares` to state)

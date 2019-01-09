@@ -56,7 +56,7 @@ lift state `squares`
 
 add state `xIsNext`
 
-**Capture the flag: Create your own `Super Ultra` Tic-Tac-Toe `Remix Hyper Edition EX Plus Alpha`**
+**Capture the flag **  
 some possible goals here...
 - Conditional rendering by read state: Show next player(O or X) on page (by update render method)
 - Set state: Click button to reset the game(NO BROWSER RELOAD!!!) (by assign new `squares` to state)
