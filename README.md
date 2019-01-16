@@ -13,8 +13,9 @@ We'll assume that you have some familiarity with HTML and JavaScript, but you sh
 If you need to review JavaScript, we recommend reading [this guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript). Note that we're also using some features from ES6 -- a recent version of JavaScript. In this tutorial, we're using [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), and [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) statements. You can use the [Babel REPL](babel://es5-syntax-example) to check what ES6 code compiles to.
 
 ## Setup for the Tutorial
-`Fork` this and run command:  
-`npm install`
+run command `npm install` to install dependencies.  
+Then `npm start` to start the developement server hosting the HTML page with React components and automatically reload page update whenever there's file system change within `/src`
+
 
 ## Overview
 
@@ -122,6 +123,6 @@ add state `xIsNext`
 
 ## Create your own Tic-Tac-Toe
 some possible goals here...
-- Conditional rendering by read state: Show next player(O or X) on page (by update render method)
+- Conditional rendering by read state: Show next player(O or X) on page (update `render` method)
 - Set state: Click button to reset the game(NO BROWSER RELOAD!!!) (by assign new `squares` to state)
-- Property: Have <em> last mark(by passing down shouldBold)
+- Property: Have `<em>` on last mark(by passing down new property e.g. `shouldBold`)
