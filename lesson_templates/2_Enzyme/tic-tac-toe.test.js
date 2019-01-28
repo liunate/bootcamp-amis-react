@@ -10,6 +10,10 @@ describe('Game', () => {
   it('should have board(shallow)', () => {
     const game = shallow(<Game/>);
 
+    /**
+     * [ShallowWrapper].containsMatchingElement => boolean
+     * https://airbnb.io/enzyme/docs/api/ShallowWrapper/containsMatchingElement.html
+     */
     expect(game.containsMatchingElement(<Board/>)).toEqual(true);
     //    console.log(game.debug());
     // Good Cases
@@ -41,6 +45,10 @@ describe('Game', () => {
     // Cheerio wrapper for traversing/manipulating the DOM
     const game = render(<Game/>);
 
+    /**
+     * `expect(actual) => [Matcher].matcher_func(arg: object(s)/value(s) or [Asymmetric_Matcher])`
+     * https://jestjs.io/docs/en/expect#expectstringcontainingstring
+     */
     expect(game.toString()).toEqual(expect.stringContaining('square'));
     //    console.log(game.toString());
 
@@ -51,6 +59,10 @@ describe('Game', () => {
   });
 });
 
+/**
+ * Enzyme Selectors
+ * https://airbnb.io/enzyme/docs/api/selector.html
+ */
 describe('Board', () => {
   // Enzyme Selectors - CSS Selector
   it('should show squares in row-by-row fashion', () => {
@@ -59,14 +71,14 @@ describe('Board', () => {
     expect(board.find('.board-row').length).toBeGreaterThan(0);
   });
 
-  // Enzyme Selectors - Prop Selector(similar to IDL attribute)
+  // Enzyme Selectors - Prop Selector(similar to JavaScript property)
   it('should decide whether to emphasize the mark inside of square', () => {
     const board = shallow(<Board/>);
     board.instance().handleMark(5);
 
     expect(board.find('[shouldEmphasize=true]').length).toBe(1);
-    // Bad Cases
-    //    expect(board.find("[shouldEmphasize='true']").length).toBe(1);
+    // Bad Cases(quotes around true)
+    //        expect(board.find("[shouldEmphasize='true']").length).toBe(1);
   });
 
   // Enzyme Selectors - React Component Constructor
@@ -76,7 +88,7 @@ describe('Board', () => {
     expect(board.find(Square)).toHaveLength(9);
   });
 
-  it('should indicate it\'s O\'s turn turn after first turn(X)', () => {
+  it('should show it\'s O\'s turn turn after first turn(X)', () => {
     const board = shallow(<Board/>);
     board.instance().handleMark(5);
 
@@ -88,7 +100,11 @@ describe('Square', () => {
   it('should be clickable', () => {
     const square = shallow(<Square/>);
 
-    expect(square.exists('button'));
+    expect(square.exists('button')).toEqual(true);
+    // Awkward Case
+    //   Expected value to equal:
+    //    true
+    //    expect(false).toEqual(square.exists('button'));
   });
 
   it.skip('should render mark when specified', () => {

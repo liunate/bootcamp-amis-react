@@ -16,7 +16,7 @@ class OlympicGame extends React.Component {
             day={'2-digit'}
             weekday={'long'}
             value={Date.now()}/></h1>
-        <div className="game-board" title={'Click me to play'}>
+        <div className="game-board" title={'Click me to play!'}>
         {/*<div className="game-board" title={<FormattedMessage id={'game.tips'}/>}>*/}
         {/*<div */}
           {/*className="game-board" */}
