@@ -5,9 +5,13 @@ function injectLoveTheme(MonoComponent){
     constructor (props){
       super(props);
 
-      this.colors = ['pink', 'deeppink', 'hotpink', 'lightpink'];
+      this.colors = this.readFromNatePreference();
     }
-    
+
+    readFromNatePreference () {
+      return ['pink', 'deeppink', 'hotpink', 'lightpink'];
+    }
+
     render(){
       let randomIndex = Math.floor(Math.random() * 4);
       const randomColor = this.colors[randomIndex];

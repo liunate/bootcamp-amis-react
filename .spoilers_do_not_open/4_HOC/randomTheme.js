@@ -5,9 +5,13 @@ function injectThemeColor(MonoComponent){
     constructor (props){
       super(props);
 
-      this.colors = ['red', 'blue', 'yellow', 'green'];
+      this.colors = this.loadUserPreference();
     }
-    
+
+    loadUserPreference () {
+      return ['red', 'blue', 'yellow', 'green'];
+    }
+
     render(){
       let randomIndex = Math.floor(Math.random() * 4);
       const randomColor = this.colors[randomIndex];
