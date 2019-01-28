@@ -6,35 +6,43 @@ configure({adapter: new Adapter()});
 
 import { Game, Board, Square } from './tic-tac-toe';
 
-describe('Game(shallow)', () => {
-  it('should have board', () => {
+describe('Game', () => {
+  it('should have board(shallow)', () => {
     const game = shallow(<Game/>);
 
     expect(game.containsMatchingElement(<Board/>)).toEqual(true);
-//    console.log(game.debug());
+    //    console.log(game.debug());
     // Good Cases
-    //    expect(game.matchesElement(<div><div><Board/></div></div>)).toEqual(true);
-    //    expect(game.matchesElement(<Board/>)).toEqual(false);
     //    expect(game.containsMatchingElement(<Square/>)).toEqual(false);
+    //    expect(game.matchesElement(<Board/>)).toEqual(false);
+    //    expect(game.matchesElement(
+    //      (<div>
+    //        <div>
+    //          Game: Tic-Tac-Toe
+    //        </div>
+    //        <div>
+    //          <Board/>
+    //        </div>
+    //      </div>))).toEqual(true);
   });
 });
 
-describe('Game(mount)', () => {
-  it('should have board', () => {
+describe('Game', () => {
+  it('should have board(mount)', () => {
     const game = mount(<Game/>);
 
     expect(game.containsMatchingElement(<Square/>)).toEqual(true);
-//    console.log(game.debug());
+    //    console.log(game.debug());
   });
 });
- 
-describe('Game(render)', () => {
-  it('should have board', () => {
+
+describe('Game', () => {
+  it('should have board(render)', () => {
     // Cheerio wrapper for traversing/manipulating the DOM
     const game = render(<Game/>);
 
     expect(game.toString()).toEqual(expect.stringContaining('square'));
-//    console.log(game.toString());
+    //    console.log(game.toString());
 
     // variable 'game' does not have containsMatchingElement function
     //    expect(game.containsMatchingElement(<Square/>)).toEqual(false);    
