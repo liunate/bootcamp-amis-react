@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { Palette, SuperPalette } from './palette';
+import { Palette } from './palette';
+//import { SuperPalette } from './palette';
+//import { GirlPalette } from './palette';
 
 /*
 React, Enzyme
  */
 ReactDOM.render(
- <SuperPalette/>
+ <Palette/>
  , document.getElementById("root"));
 
 /* 
