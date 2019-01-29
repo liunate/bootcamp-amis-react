@@ -14,10 +14,13 @@ const enMessages = require('./translations/en').default;
 // Create the IntlProvider to retrieve context for wrapping around.
 const intlProvider = new IntlProvider({locale: 'en', messages: enMessages}, {});
 const {intl} = intlProvider.getChildContext();
+//const intlProviderContext = intlProvider.getChildContext();
+//const intl = intlProviderContext.intl;
 
 /*
  * When using React-Intl `injectIntl` on components, props.intl is required.
- */
+ * See node_modules/react-intl/lib/index.es.js:566
+*/
 function nodeWithIntlProp(node) {
   return React.cloneElement(node, {intl});
 }
