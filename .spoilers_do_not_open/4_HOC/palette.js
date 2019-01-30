@@ -1,6 +1,5 @@
 import React from 'react';
-//import { injectThemeColor } from './randomTheme';
-//import { injectLoveTheme } from './loveTheme';
+import { injectThemeColor } from './themeModule';
 
 export class Palette extends React.Component {
   render() {
@@ -12,5 +11,4 @@ export class Palette extends React.Component {
   }
 }
 
-//export const SuperPalette = injectThemeColor(Palette);
-//export const GirlPalette = injectLoveTheme(Palette);
+export const SuperPalette = injectThemeColor(Palette);

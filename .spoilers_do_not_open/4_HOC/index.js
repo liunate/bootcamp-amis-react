@@ -2,15 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Palette } from './palette';
-//import { SuperPalette } from './palette';
-//import { GirlPalette } from './palette';
+import {ThemeSupplier} from './themeModule';
+import { SuperPalette } from './palette';
 
 /*
 React, Enzyme
  */
-ReactDOM.render(
- <Palette/>
- , document.getElementById("root"));
+//ReactDOM.render(
+//  <ThemeSupplier>
+//    <Palette/>
+//  </ThemeSupplier>
+// , document.getElementById("root"));
 
 /* 
 React Intl
@@ -36,15 +38,22 @@ React Intl
 //    <OlympicGame/>
 //  </IntlProvider>
 //  , document.getElementById('root'));
-
-
+//
+//
 
 
 /*
-HOC
+HOC 1
  */
-//import { OtakuGame } from './otakuGame';
-//
+ReactDOM.render(
+  <ThemeSupplier>
+    <Palette/>
+  </ThemeSupplier>
+  , document.getElementById("root"));
+
+/*
+HOC 2
+ */
 //ReactDOM.render(
-//  <OtakuGame/>
-//  , document.getElementById('root'));
+//  <SuperPalette/>
+//  , document.getElementById("root"));
