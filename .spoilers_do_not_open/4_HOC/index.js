@@ -45,15 +45,15 @@ React Intl
 /*
 HOC 1
  */
-ReactDOM.render(
-  <ThemeSupplier>
-    <Palette/>
-  </ThemeSupplier>
-  , document.getElementById("root"));
+//ReactDOM.render(
+//  <ThemeSupplier>
+//    <Palette/>
+//  </ThemeSupplier>
+//  , document.getElementById("root"));
 
 /*
 HOC 2
  */
-//ReactDOM.render(
-//  <SuperPalette/>
-//  , document.getElementById("root"));
+ReactDOM.render(
+  <SuperPalette/>
+  , document.getElementById("root"));
